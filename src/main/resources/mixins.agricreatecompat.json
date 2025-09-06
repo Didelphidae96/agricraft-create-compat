@@ -1,0 +1,12 @@
+{
+  "package": "com.accbdd.agricreatecompat.mixins",
+  "refmap": "mixins.agricreatecompat.refmap.json",
+  "mixins": [
+    "CreateHarvesterPatch"
+  ],
+  "client": [
+  ],
+  "server": [
+  ],
+  "minVersion": "0.8"
+}

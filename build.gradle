@@ -64,13 +64,14 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor "org.spongepowered:mixin:0.8.5:processor"
 
-    implementation fg.deobf("curse.maven:natures-aura-306626:4963590")
-    implementation fg.deobf("curse.maven:patchouli-306770:6164575")
+    implementation fg.deobf("curse.maven:agricraft-225635:5899444")
+    implementation fg.deobf("curse.maven:create-328085:6641603")
+    implementation fg.deobf("curse.maven:resourceful-config-714059:6231176")
 }
 
 mixin {
-    add sourceSets.main, 'mixins.narenderfix.refmap.json'
-    config 'mixins.narenderfix.json'
+    add sourceSets.main, 'mixins.agricreatecompat.refmap.json'
+    config 'mixins.agricreatecompat.json'
 
     debug.verbose = true
     debug.export = true
@@ -88,6 +89,10 @@ tasks.named('processResources', ProcessResources).configure {
 
     filesMatching(['META-INF/mods.toml', 'pack.mcmeta']) {
         expand replaceProperties + [project: project]
+    }
+
+    from("src/main/resources") {
+        include("mixins.agricreatecompat.refmap.json")
     }
 }
 

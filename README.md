@@ -1,2 +1,2 @@
-# naturesaura-renderfix
-A small patch for Nature's Aura to fix a rendering issue.
+# agricraft-create-compat
+A small patch allowing Create's harvester to work with AgriCraft plants
